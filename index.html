@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quizzy App by Dimcik with Love</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app-shell">
+    <section class="hero" aria-label="Informații quiz">
+      <div class="hero-content">
+        <div id="appBrand" class="app-brand"><span class="brand-main">QUIZZY APP</span><span class="brand-love">by Dimcik with Love</span></div>
+        <h1 id="quizTitle">Alege quizul</h1>
+        <p id="quizSubtitle">Alege batch-ul de întrebări, parcurge-le în ordine cu paginare, marchează variantele, apoi verifică fiecare întrebare separat.</p>
+      </div>
+      <div class="hero-stat" aria-label="Număr total de întrebări">
+        <strong id="totalQuestions">0</strong>
+        <span>întrebări disponibile</span>
+      </div>
+    </section>
+
+    <section class="toolbar" aria-label="Setări quiz">
+      <label for="questionCount">Întrebări per pagină</label>
+      <select id="questionCount">
+        <option value="10">10 întrebări</option>
+        <option value="20">20 întrebări</option>
+        <option value="30">30 întrebări</option>
+        <option value="60" selected>60 întrebări</option>
+      </select>
+      <button id="chooseQuizBtn" class="secondary">Schimbă quizul</button>
+      <button id="startBtn" class="primary">Afișează de la început</button>
+      <button id="resetBtn" class="secondary">Resetează răspunsurile</button>
+    </section>
+
+    <section id="pagerTop" class="pager" aria-label="Paginare"></section>
+
+    <section class="scorebar">
+      <div><strong id="answeredCount">0</strong> verificate</div>
+      <div><strong id="correctCount">0</strong> complet corecte</div>
+      <div><strong id="wrongCount">0</strong> cu greșeli</div>
+    </section>
+
+    <section id="quiz" class="quiz-list"></section>
+
+    <section id="pagerBottom" class="pager pager-bottom" aria-label="Paginare jos"></section>
+  </main>
+
+  <div id="quizModal" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="quizModalTitle">
+    <section class="modal-card">
+      <div class="modal-head">
+        <div>
+          <div class="modal-kicker">QUIZZY APP <span class="modal-love">by Dimcik with Love</span></div>
+          <h2 id="quizModalTitle">Alege documentul de întrebări</h2>
+          <p>Alege un fișier <strong>.txt</strong>. Titlul quizului se ia din lista de documente, iar întrebările se încarcă din fișierul selectat.</p>
+        </div>
+      </div>
+
+      <div class="modal-body">
+        <div id="quizFileList" class="quiz-file-list"></div>
+
+        <div class="modal-actions">
+          <button id="loadSelectedQuizBtn" class="primary">Deschide quizul selectat</button>
+          <label class="file-upload-btn secondary" for="manualTxtInput">Alege manual .txt</label>
+          <input id="manualTxtInput" type="file" accept=".txt,text/plain" multiple hidden />
+        </div>
+
+        <p id="quizModalHint" class="modal-hint">
+          Poți adăuga mai multe documente în <code>quiz-list.txt</code> sau poți alege manual unul sau mai multe fișiere .txt.
+        </p>
+      </div>
+    </section>
+  </div>
+
+  <script src="quiz-list.txt?v=566-no-folder-fixed-meta"></script>
+  <script src="app.js?v=566-no-folder-fixed-meta"></script>
+</body>
+</html>

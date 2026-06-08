@@ -1,0 +1,6 @@
+window.QUIZ_FILES = [
+  {
+    title: "FIZPAT EXAMEN",
+    file: "FIZPAT_EXAMEN.txt"
+  }
+];
