@@ -1,5 +1,5 @@
 /*
-  Datele quiz-ului pentru aplicația Small Quiz App.
+  Datele quiz-ului pentru aplicația Quizzy App.
   Sursa: Fp26ex.pdf.
   Variantele corecte au fost detectate după semnul + din document.
   Versiune deduplicată: 711 întrebări unice, duplicatele după enunț au fost eliminate.

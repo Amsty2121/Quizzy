@@ -21,7 +21,7 @@ const quizModalHint = document.getElementById('quizModalHint');
 const DEFAULT_META = {
   title: 'Alege quizul',
   subtitle: 'Alege batch-ul de întrebări, parcurge-le în ordine cu paginare, marchează variantele, apoi verifică fiecare întrebare separat.',
-  brand: 'SMALL QUIZ APP by Dimcik with Love'
+  brand: 'QUIZZY APP by Dimcik with Love'
 };
 
 let availableQuizFiles = normalizeInitialFiles(window.QUIZ_FILES);
